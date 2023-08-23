@@ -6,6 +6,17 @@ import java.util.List;
 public class MethodSignature {
     private String accessModifier;
     private String returnType;
+
+    @Override
+    public String toString() {
+        return "MethodSignature{" +
+                "accessModifier='" + accessModifier + '\'' +
+                ", returnType='" + returnType + '\'' +
+                ", methodName='" + methodName + '\'' +
+                ", arguments=" + arguments +
+                '}';
+    }
+
     private String methodName;
     private final List<Argument> arguments;
 
@@ -69,6 +80,14 @@ public class MethodSignature {
 
         public void setName(String name) {
             this.name = name;
+        }
+
+        @Override
+        public String toString() {
+            return "Argument{" +
+                    "type='" + type + '\'' +
+                    ", name='" + name + '\'' +
+                    '}';
         }
     }
 }
